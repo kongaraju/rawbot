@@ -9,34 +9,34 @@ console.log('The default user agent is ' + page.settings.userAgent);
 if (system.args.length === 1) {
     console.log('Usage: rawbot.js <some URL>');
     phantom.exit(1);
+} 
+else {
+  page.onInitialized = function () {
+      page.evaluate(function () {
+          (function () {
+              var platform = "Linux";
+              window.navigator.__defineGetter__('platform', function () {
+                  window.navigator.sniffed = true;
+                  return platform;
+              });
+          })();
+      });
+  };
+  
+  address = system.args[1];
+  t = Date.now();
+  page.settings.userAgent = Mozilla35;
+  
+  page.open(address, function (status) {
+      if (status !== 'success') {
+          console.log('Unable to access network');
+      } else {
+          t = Date.now() - t;
+          console.log('Page title is ' + page.evaluate(function () {
+              return document.title;
+          }));
+          console.log('Loading time ' + t + ' msec');
+      }
+      phantom.exit();
+  });
 }
-
-page.onInitialized = function () {
-    page.evaluate(function () {
-
-        (function () {
-            var platform = "Linux";
-
-            window.navigator.__defineGetter__('platform', function () {
-                window.navigator.sniffed = true;
-                return platform;
-            });
-        })();
-    });
-};
-
-address = system.args[1];
- t = Date.now();
-page.settings.userAgent = 'Mozilla35';
-page.open(, function (status) {
-    if (status !== 'success') {
-        console.log('Unable to access network');
-    } else {
-        t = Date.now() - t;
-        console.log('Page title is ' + page.evaluate(function () {
-            return document.title;
-        }));
-        console.log('Loading time ' + t + ' msec');
-    }
-    phantom.exit();
-});
