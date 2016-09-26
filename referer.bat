@@ -1,0 +1,1 @@
+phantomjs2 --proxy=127.0.0.1:9150 --proxy-type=socks5 --cookies-file=cookies.txt referer.js http://rk-awesome.blogspot.in/ http://stackoverflow.com/questions/11010834/how-to-run-multiple-dos-commands-in-parallel

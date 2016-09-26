@@ -1,0 +1,1 @@
+This store localstorage files
