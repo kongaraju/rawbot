@@ -5,7 +5,7 @@
 2. Random OS 
 3. Random UserAgent
 4. Random Session
-5. 
+5. Random referrer
 
 
 ## Tor Configuration: to change ip address in quick intervals
