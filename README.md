@@ -14,11 +14,11 @@
 
 ## Tor Configuration: to change ip address in quick intervals
 
-path "path/to/your/torbrowser/Data/Tor/torrc"
+path `"path/to/your/torbrowser/Data/Tor/torrc"`
 
-MaxCircuitDirtiness NUM
+`MaxCircuitDirtiness NUM`
 
-NUM is seconds 
+`NUM` is seconds 
 defaults to 10 minuts
 minimum 10 seconds
 
