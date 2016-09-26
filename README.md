@@ -1,4 +1,8 @@
-#### Rawbot
+# Rawbot
+
+### Prerequisites
+1. PhantomJs 
+2. TOR browser
 
 ## Goals
 1. Aunonamous IP
@@ -15,7 +19,7 @@ path "path/to/your/torbrowser/Data/Tor/torrc"
 MaxCircuitDirtiness NUM
 
 NUM is seconds 
-defaults to 10minuts
+defaults to 10 minuts
 minimum 10 seconds
 
 Source Url : https://www.quora.com/Is-it-possible-to-configure-TOR-to-change-its-routing-path-more-frequently
