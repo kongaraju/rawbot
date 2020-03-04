@@ -5,7 +5,7 @@
 2. TOR browser
 
 ## Goals
-1. Aunonamous IP
+1. Anonamous IP
 2. Random OS 
 3. Random UserAgent
 4. Random Session
